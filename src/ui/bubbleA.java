@@ -21,18 +21,18 @@ public class bubbleA {
 					array[k] = u;
 				}
 				PrintWriter pw = new PrintWriter(new File("data\\bubbleA-"+contador+".tx"));
-				String t = null;
+				//String t = "";
 				boolean isOrdered = false;
 					for (int i = 0; i < array.length-1 && !isOrdered; i++) {
 							isOrdered = true;
-							pw.print(t+ "\n");
+							//pw.print(t+ "\n");
 						for (int j = 0; j < array.length-1-i; j++) {
 							if(array[i]>array[i+1]) {
 								isOrdered = false;
 								int temp = array[i];
 								array[i] = array[i+1];
 								array[i+1] = temp;
-								t += array[i]+""+" ";
+								pw.print(array[i]+""+" ");
 							}
 						}
 					}		
